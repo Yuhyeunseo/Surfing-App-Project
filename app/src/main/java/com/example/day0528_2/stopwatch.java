@@ -61,7 +61,7 @@ public class stopwatch extends AppCompatActivity {
             public void onClick(View v) {
                 if (isRunning) {
                     timerHandler.removeCallbacks(timerRunnable);
-                    updateTime += System.currentTimeMillis() - startTime;
+                    updateTime = System.currentTimeMillis() - startTime;
                     records.add(tvTimer.getText().toString());
                     recordsAdapter.notifyDataSetChanged();
                     btnStartPause.setText("Start");
