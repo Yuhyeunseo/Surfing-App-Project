@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".time">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/homeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="WAVE SURFER"
+            android:background="@color/white"
+            android:textColor="#87CEEB"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="260dp"
+        app:srcCompat="@drawable/timer"
+        android:id="@+id/tbtn1"
+        />
+    <ImageButton
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="245dp"
+        app:srcCompat="@drawable/stopwatch"
+        android:id="@+id/tbtn2" />
+
+</LinearLayout>
