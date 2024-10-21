@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".diary">
+    android:background="#E0F7FA"
+    tools:context=".MainActivity">
 
     <RelativeLayout
         android:id="@+id/top_bar"
@@ -14,34 +14,69 @@
         android:background="#FFFFFF"
         android:padding="10dp">
 
-        <Button
-            android:id="@+id/homeBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="WAVE SURFER"
-            android:background="@color/white"
-            android:textColor="#87CEEB"
-            android:textSize="30sp"
-            android:textStyle="bold"/>
+    <Button
+        android:id="@+id/homeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="WAVE SURFER"
+        android:textColor="#87CEEB"
+        android:background="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
     </RelativeLayout>
 
     <DatePicker
-        android:layout_width="match_parent"
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:calendarViewShown="false"
-        android:id="@+id/datePicker"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#00BCD4"
-        android:lines="8"
-        android:id="@+id/edtDialy"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="새로 저장"
-        android:enabled="false"
-        android:id="@+id/btnWrite2"/>
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-</LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btnWrite2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#81D4FA"
+        android:text="저장"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- 다이어리 입력란 (EditText) -->
+    <EditText
+        android:id="@+id/edtDialy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="180dp"
+    android:layout_margin="16dp"
+    android:background="@drawable/rounded_edittext"
+    android:hint="일기를 작성하세요..."
+    android:padding="16dp"
+    android:textColor="#0288D1"
+    android:textSize="16sp"
+    android:gravity="top"
+    app:layout_constraintTop_toBottomOf="@+id/btnWrite2"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+

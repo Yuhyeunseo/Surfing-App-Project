@@ -1,65 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#D3D3D3"
+    android:background="#ffffff"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/top_bar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:padding="10dp">
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="10dp">
+
+         <Button
+             android:id="@+id/homeBtn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerHorizontal="true"
+             android:text="WAVE SURFER"
+             android:textColor="#87CEEB"
+             android:background="@color/white"
+             android:textSize="30sp"
+             android:textStyle="bold" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/editTextHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="키(cm)"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/editTextWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="체중(kg)"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/editTextDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="활동 시간(분)"
+            android:inputType="numberDecimal"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="16dp" />
 
         <Button
-            android:id="@+id/homeBtn"
-            android:layout_width="wrap_content"
+            android:id="@+id/buttonCalculate"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="WAVE SURFER"
-            android:background="@color/white"
-            android:textColor="#87CEEB"
-            android:textSize="30sp"
-            android:textStyle="bold"/>
-    </RelativeLayout>
+            android:text="칼로리 계산"
+            android:backgroundTint="#00BFFF"
+            android:textColor="#FFFFFF"
+            android:padding="12dp" />
 
-    <EditText
-        android:id="@+id/editTextHeight"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="키 (cm)"
-        />
-
-    <EditText
-        android:id="@+id/editTextWeight"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="몸무게 (kg)"
-        />
-
-    <EditText
-        android:id="@+id/editTextDuration"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="운동 시간 (분)"
-        />
-
-    <Button
-        android:id="@+id/buttonCalculate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="칼로리 계산"
-        />
-
-    <TextView
-        android:id="@+id/textViewResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="소모 칼로리: "
-        />
-
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="칼로리: 0 kcal"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:paddingTop="24dp"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
 </LinearLayout>

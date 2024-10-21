@@ -1,15 +1,23 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/top_bar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:padding="10dp">
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="10dp">
 
         <Button
             android:id="@+id/homeBtn"
@@ -17,43 +25,63 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="WAVE SURFER"
-            android:background="@color/white"
             android:textColor="#87CEEB"
+            android:background="@color/white"
             android:textSize="30sp"
-            android:textStyle="bold"/>
-    </RelativeLayout>
+            android:textStyle="bold" />
+        </RelativeLayout>
 
+    <!-- 스톱워치 디스플레이 -->
     <TextView
-        android:id="@+id/tvTimer"
+        android:id="@+id/stopwatchTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00:00:00"
         android:textSize="48sp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"/>
+        android:textColor="#000000"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="24dp" />
 
-    <Button
-        android:id="@+id/btnStartPause"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        android:layout_below="@id/tvTimer"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"/>
-
-    <Button
-        android:id="@+id/btnReset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reset"
-        android:layout_below="@id/btnStartPause"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"/>
-
-    <ListView
-        android:id="@+id/lvRecords"
+    <!-- 버튼 레이아웃: 가운데 정렬 -->
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnReset"
-        android:layout_marginTop="30dp"/>
-</RelativeLayout>
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="시작"
+            android:backgroundTint="#00BFFF"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="초기화"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#00BFFF"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/recordTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:text="구간기록:"
+        android:textSize="18sp"
+        android:paddingBottom="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginLeft="16dp"
+        android:id="@+id/recordRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    </LinearLayout>
+</LinearLayout>

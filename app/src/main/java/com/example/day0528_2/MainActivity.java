@@ -25,6 +25,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import com.example.day0528_2.RecordAdapter;
+
+
 
 public class MainActivity extends AppCompatActivity {
     ImageView btn1, btn2, btn3, btn4;
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         btn2 = findViewById(R.id.btn2);
         btn3 = findViewById(R.id.btn3);
         btn4 = findViewById(R.id.btn4);
+
 
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override

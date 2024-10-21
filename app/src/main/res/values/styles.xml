@@ -1,0 +1,23 @@
+<resources>
+    <!-- 기본 테마가 있는 경우 여기에 추가 -->
+
+    <!-- DatePicker 스타일 -->
+    <style name="CustomDatePicker" parent="Theme.AppCompat.Light.Dialog">
+        <!-- 배경 색상을 하늘색으로 설정 -->
+        <item name="android:datePickerDialogTheme">@style/CustomDatePickerDialog</item>
+
+    </style>
+
+    <!-- DatePicker 다이얼로그 테마 -->
+    <style name="CustomDatePickerDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">#81D4FA</item> <!-- 하늘색 톤으로 변경 -->
+    </style>
+
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:headerBackground">#81D4FA</item> <!-- 상단 배경색을 하늘색으로 설정 -->
+        <item name="android:calendarTextColor">#0288D1</item> <!-- 텍스트 색상도 하늘색에 맞춰 설정 -->
+    </style>
+
+
+</resources>
